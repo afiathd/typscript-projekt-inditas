@@ -1,0 +1,20 @@
+1. Github project Létrehozása a portálon
+
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://github.com/afiathd/Typescript-npm-webpack.git
+    git push -u origin main
+
+2.  Fejlesztés közben
+
+    git status
+
+    git add egyfajl.txt
+    git add .
+
+    git commit -m "Üzenet"
+    git commit
+
+    git push
