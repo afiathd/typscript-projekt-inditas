@@ -1,0 +1,47 @@
+1. NPM Projekt Inicializálása
+
+    npm init -y
+
+2. TypeScript Telepítése (wepback, stb..)
+
+    npm install --save-dev webpack webpack-cli typescript ts-loader
+
+3. TypeScript Konfigurációs Fájl Létrehozása
+
+    npx tsc --init
+
+4. Webpacket a projekt összeállítása
+
+    npx webpack
+
+5. Fejlesztői Szerver Használata
+
+    npm install --save-dev webpack-dev-server
+
+6. Majd adjunk hozzá egy szkriptet a package.json fájlhoz a szerver elindításához:
+
+    "scripts": {
+        "start": "webpack serve --open"
+        }
+
+7. CSS és Stílusok Kezelése
+
+    npm install --save-dev style-loader css-loader
+
+ Frissítsük a webpack.config.js fájlt, hogy beállítsuk a CSS loader-eket:
+
+    module: {
+        rules: [
+            // TypeScript loader
+            {
+            test: /\.tsx?$/,
+            use: 'ts-loader',
+            exclude: /node_modules/,
+            },
+            // CSS loader
+            {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader'],
+            },
+        ],
+        }
